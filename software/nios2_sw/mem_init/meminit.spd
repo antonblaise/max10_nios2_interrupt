@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+<file path="hdl_sim/nios2_RAM.dat" type="DAT" initParamName="INIT_FILE" memoryPath="RAM" />
+<file path="hdl_sim/nios2_ROM.dat" type="DAT" initParamName="INIT_FILE" memoryPath="ROM" />
+<file path="hdl_sim/onchip_flash.dat" type="DAT" initParamName="INIT_FILENAME" memoryPath="onchip_flash" />
+<file path="nios2_RAM.hex" type="HEX" initParamName="INIT_FILE" memoryPath="RAM" />
+<file path="nios2_ROM.hex" type="HEX" initParamName="INIT_FILE" memoryPath="ROM" />
+<file path="onchip_flash.hex" type="HEX" initParamName="INIT_FILENAME" memoryPath="onchip_flash" />
+</simPackage>

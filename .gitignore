@@ -1,0 +1,6 @@
+*.sof
+*.pof
+db/
+incremental_db/
+!FINAL_DESIGN.pof
+backup/

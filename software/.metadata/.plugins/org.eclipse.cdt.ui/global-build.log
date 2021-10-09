@@ -1,0 +1,46 @@
+03:08:06 **** Build of configuration Nios II for project nios2_sw ****
+make mem_init_generate 
+Info: Building ../nios2_sw_bsp/
+C:/intelFPGA/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios2_sw_bsp/
+[BSP build complete]
+Post-processing to create mem_init/nios2_RAM.hex...
+elf2hex nios2_sw.elf 0x00420000 0x00438fff --width=32 --little-endian-mem --create-lanes=0 mem_init/nios2_RAM.hex
+Post-processing to create mem_init/nios2_ROM.hex...
+elf2hex nios2_sw.elf 0x00441000 0x0044103f --width=16 --little-endian-mem --create-lanes=0 mem_init/nios2_ROM.hex
+Post-processing to create mem_init/onchip_flash.hex...
+elf2hex nios2_sw.elf 0x00200000 0x0035ffff --width=8 --little-endian-mem --create-lanes=0 mem_init/onchip_flash.hex
+Post-processing to create mem_init/hdl_sim/nios2_RAM.dat...
+elf2dat --infile=nios2_sw.elf --outfile=mem_init/hdl_sim/nios2_RAM.dat \
+		--base=0x00420000 --end=0x00438fff --width=32 \
+		--little-endian-mem --create-lanes=0 
+Post-processing to create mem_init/hdl_sim/nios2_ROM.dat...
+elf2dat --infile=nios2_sw.elf --outfile=mem_init/hdl_sim/nios2_ROM.dat \
+		--base=0x00441000 --end=0x0044103f --width=16 \
+		--little-endian-mem --create-lanes=0 
+Post-processing to create mem_init/hdl_sim/onchip_flash.dat...
+elf2dat --infile=nios2_sw.elf --outfile=mem_init/hdl_sim/onchip_flash.dat \
+		--base=0x00200000 --end=0x0035ffff --width=32 \
+		--little-endian-mem --create-lanes=0 
+Post-processing to create mem_init/hdl_sim/nios2_RAM.sym...
+nios2-elf-nm -n nios2_sw.elf > mem_init/hdl_sim/nios2_RAM.sym
+Post-processing to create mem_init/hdl_sim/nios2_ROM.sym...
+nios2-elf-nm -n nios2_sw.elf > mem_init/hdl_sim/nios2_ROM.sym
+Post-processing to create mem_init/hdl_sim/onchip_flash.sym...
+nios2-elf-nm -n nios2_sw.elf > mem_init/hdl_sim/onchip_flash.sym
+Post-processing to create onchip_flash.flash...
+elf2flash --input=nios2_sw.elf --outfile=onchip_flash.flash --sim_optimize=0 --little-endian-mem \
+		--base=0x00200000 --end=0x0035ffff --reset=0x00420000  
+Post-processing to create mem_init/meminit.spd...
+Post-processing to create mem_init/meminit.qip...
+03:23:30 **** Build of configuration Nios II for project nios2_sw ****
+make all 
+Info: Building ../nios2_sw_bsp/
+C:/intelFPGA/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios2_sw_bsp/
+[BSP build complete]
+[nios2_sw build complete]
+03:23:43 **** Incremental Build of configuration Nios II for project nios2_sw ****
+make all 
+Info: Building ../nios2_sw_bsp/
+C:/intelFPGA/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../nios2_sw_bsp/
+[BSP build complete]
+[nios2_sw build complete]

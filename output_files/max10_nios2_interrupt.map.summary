@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sun Oct 10 03:54:56 2021
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : max10_nios2_interrupt
+Top-level Entity Name : top
+Family : MAX 10
+Total logic elements : 2,700
+    Total combinational functions : 2,496
+    Dedicated logic registers : 1,318
+Total registers : 1318
+Total pins : 71
+Total virtual pins : 0
+Total memory bits : 829,952
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 1
+ADC blocks : 0
