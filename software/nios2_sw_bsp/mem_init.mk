@@ -161,7 +161,7 @@ ACDS_VERSION := 18.0
 SIM_OPTIMIZE ?= 0
 
 # The CPU reset address as needed by elf2flash
-RESET_ADDRESS ?= 0x00420000
+RESET_ADDRESS ?= 0x00020000
 
 # The specific Nios II ELF file format to use.
 NIOS2_ELF_FORMAT ?= elf32-littlenios2
@@ -180,12 +180,12 @@ DAT_FILES += $(HDL_SIM_DIR)/$(MEM_0).dat
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).dat
 SYM_FILES += $(HDL_SIM_DIR)/$(MEM_0).sym
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_0).sym
-$(MEM_0)_START := 0x00420000
-$(MEM_0)_END := 0x00438fff
+$(MEM_0)_START := 0x00020000
+$(MEM_0)_END := 0x00038fff
 $(MEM_0)_SPAN := 0x00019000
 $(MEM_0)_HIERARCHICAL_PATH := RAM
-$(MEM_0)_WIDTH := 32
-$(MEM_0)_HEX_DATA_WIDTH := 32
+$(MEM_0)_WIDTH := 16
+$(MEM_0)_HEX_DATA_WIDTH := 16
 $(MEM_0)_ENDIANNESS := --little-endian-mem
 $(MEM_0)_CREATE_LANES := 0
 
@@ -193,7 +193,7 @@ $(MEM_0)_CREATE_LANES := 0
 RAM: check_elf_exists $(MEM_INIT_DIR)/$(MEM_0).hex $(HDL_SIM_DIR)/$(MEM_0).dat $(HDL_SIM_DIR)/$(MEM_0).sym
 
 # Memory: ROM
-MEM_1 := nios2_ROM
+MEM_1 := ROM_content
 $(MEM_1)_NAME := ROM
 $(MEM_1)_MEM_INIT_FILE_PARAM_NAME := INIT_FILE
 HEX_FILES += $(MEM_INIT_DIR)/$(MEM_1).hex
@@ -202,8 +202,8 @@ DAT_FILES += $(HDL_SIM_DIR)/$(MEM_1).dat
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_1).dat
 SYM_FILES += $(HDL_SIM_DIR)/$(MEM_1).sym
 HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_1).sym
-$(MEM_1)_START := 0x00441000
-$(MEM_1)_END := 0x0044103f
+$(MEM_1)_START := 0x00041000
+$(MEM_1)_END := 0x0004103f
 $(MEM_1)_SPAN := 0x00000040
 $(MEM_1)_HIERARCHICAL_PATH := ROM
 $(MEM_1)_WIDTH := 16
@@ -213,30 +213,6 @@ $(MEM_1)_CREATE_LANES := 0
 
 .PHONY: ROM
 ROM: check_elf_exists $(MEM_INIT_DIR)/$(MEM_1).hex $(HDL_SIM_DIR)/$(MEM_1).dat $(HDL_SIM_DIR)/$(MEM_1).sym
-
-# Memory: onchip_flash
-MEM_2 := onchip_flash
-$(MEM_2)_NAME := onchip_flash
-$(MEM_2)_MEM_INIT_FILE_PARAM_NAME := INIT_FILENAME
-HEX_FILES += $(MEM_INIT_DIR)/$(MEM_2).hex
-MEM_INIT_INSTALL_FILES += $(MEM_INIT_INSTALL_DIR)/$(MEM_2).hex
-DAT_FILES += $(HDL_SIM_DIR)/$(MEM_2).dat
-HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_2).dat
-SYM_FILES += $(HDL_SIM_DIR)/$(MEM_2).sym
-HDL_SIM_INSTALL_FILES += $(HDL_SIM_INSTALL_DIR)/$(MEM_2).sym
-FLASH_FILES += $(MEM_2).flash
-$(MEM_2)_START := 0x00200000
-$(MEM_2)_END := 0x0035ffff
-$(MEM_2)_SPAN := 0x00160000
-$(MEM_2)_HIERARCHICAL_PATH := onchip_flash
-$(MEM_2)_WIDTH := 32
-$(MEM_2)_HEX_DATA_WIDTH := 8
-$(MEM_2)_ENDIANNESS := --little-endian-mem
-$(MEM_2)_CREATE_LANES := 0
-$(MEM_2)_CFI_FLAGS := --base=$($(MEM_2)_START) --end=$($(MEM_2)_END) --reset=$(RESET_ADDRESS)
-
-.PHONY: onchip_flash
-onchip_flash: check_elf_exists $(MEM_INIT_DIR)/$(MEM_2).hex $(HDL_SIM_DIR)/$(MEM_2).dat $(HDL_SIM_DIR)/$(MEM_2).sym $(MEM_2).flash
 
 
 #END OF BSP SPECIFIC

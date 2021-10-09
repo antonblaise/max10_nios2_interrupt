@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'nios2'
  * SOPC Builder design path: ../../nios2.sopcinfo
  *
- * Generated: Sun Oct 10 03:05:05 SGT 2021
+ * Generated: Sun Oct 10 05:18:09 SGT 2021
  */
 
 /*
@@ -59,14 +59,12 @@
  */
 
 #include "altera_nios2_gen2_irq.h"
-#include "altera_onchip_flash.h"
 
 /*
  * Allocate the device storage
  */
 
 ALTERA_NIOS2_GEN2_IRQ_INSTANCE ( CPU, cpu);
-ALTERA_ONCHIP_FLASH_DATA_CSR_INSTANCE ( ONCHIP_FLASH, ONCHIP_FLASH_DATA, ONCHIP_FLASH_CSR, onchip_flash);
 
 /*
  * Initialize the interrupt controller devices
@@ -89,5 +87,4 @@ void alt_irq_init ( const void* base )
 
 void alt_sys_init( void )
 {
-    ALTERA_ONCHIP_FLASH_INIT ( ONCHIP_FLASH, onchip_flash);
 }

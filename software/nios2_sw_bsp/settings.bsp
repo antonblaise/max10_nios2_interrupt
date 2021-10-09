@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 10, 2021 3:07:55 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1633806475257</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Oct 10, 2021 5:21:59 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1633814519223</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>E:\My_studies\3rd_year\Internship\Training\max10_nios2_interrupt\software\nios2_sw_bsp</BspGeneratedLocation>
         <BspSettingsFile>E:\My_studies\3rd_year\Internship\Training\max10_nios2_interrupt\software\nios2_sw_bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios2.sopcinfo</SopcDesignFile>
@@ -86,7 +86,7 @@
                 <SettingName>hal.linker.enable_alt_load_copy_rodata</SettingName>
                 <Identifier>none</Identifier>
                 <Type>Boolean</Type>
-                <Value>0</Value>
+                <Value>1</Value>
                 <DefaultValue>0</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Causes the alt_load() facility to copy the .rodata section. If true, this setting defines the macro ALT_LOAD_COPY_RODATA in linker.h.</Description>
@@ -110,7 +110,7 @@
                 <SettingName>hal.linker.enable_alt_load_copy_exceptions</SettingName>
                 <Identifier>none</Identifier>
                 <Type>Boolean</Type>
-                <Value>0</Value>
+                <Value>1</Value>
                 <DefaultValue>0</DefaultValue>
                 <DestinationFile>none</DestinationFile>
                 <Description>Causes the alt_load() facility to copy the .exceptions section. If true, this setting defines the macro ALT_LOAD_COPY_EXCEPTIONS in linker.h.</Description>
@@ -875,86 +875,74 @@
                 <Group>none</Group>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>onchip_flash_data</slaveDescriptor>
-                <addressRange>0x00200000 - 0x0035FFFF</addressRange>
-                <addressSpan>1441792</addressSpan>
-                <attributes>flash, memory, non-volatile</attributes>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>RAM</slaveDescriptor>
-                <addressRange>0x00420000 - 0x00438FFF</addressRange>
+                <addressRange>0x00020000 - 0x00038FFF</addressRange>
                 <addressSpan>102400</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ROM</slaveDescriptor>
-                <addressRange>0x00441000 - 0x0044103F</addressRange>
+                <addressRange>0x00041000 - 0x0004103F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes>memory, non-volatile</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>hex4</slaveDescriptor>
-                <addressRange>0x00441040 - 0x0044104F</addressRange>
+                <addressRange>0x00041040 - 0x0004104F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>hex5</slaveDescriptor>
-                <addressRange>0x00441050 - 0x0044105F</addressRange>
+                <addressRange>0x00041050 - 0x0004105F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>hex3</slaveDescriptor>
-                <addressRange>0x00441060 - 0x0044106F</addressRange>
+                <addressRange>0x00041060 - 0x0004106F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>hex2</slaveDescriptor>
-                <addressRange>0x00441070 - 0x0044107F</addressRange>
+                <addressRange>0x00041070 - 0x0004107F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>hex1</slaveDescriptor>
-                <addressRange>0x00441080 - 0x0044108F</addressRange>
+                <addressRange>0x00041080 - 0x0004108F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>hex0</slaveDescriptor>
-                <addressRange>0x00441090 - 0x0044109F</addressRange>
+                <addressRange>0x00041090 - 0x0004109F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>button</slaveDescriptor>
-                <addressRange>0x004410A0 - 0x004410AF</addressRange>
+                <addressRange>0x000410A0 - 0x000410AF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>led</slaveDescriptor>
-                <addressRange>0x004410B0 - 0x004410BF</addressRange>
+                <addressRange>0x000410B0 - 0x000410BF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>switch</slaveDescriptor>
-                <addressRange>0x004410C0 - 0x004410CF</addressRange>
+                <addressRange>0x000410C0 - 0x000410CF</addressRange>
                 <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>onchip_flash_csr</slaveDescriptor>
-                <addressRange>0x004410D8 - 0x004410DF</addressRange>
-                <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <LinkerSection>
                 <sectionName>.text</sectionName>
-                <regionName>onchip_flash_data</regionName>
+                <regionName>RAM</regionName>
         </LinkerSection>
         <LinkerSection>
                 <sectionName>.rodata</sectionName>

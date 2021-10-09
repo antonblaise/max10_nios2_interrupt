@@ -1,18 +1,18 @@
-Fitter Status : Successful - Sun Oct 10 03:55:32 2021
+Fitter Status : Successful - Sun Oct 10 05:11:43 2021
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 Revision Name : max10_nios2_interrupt
 Top-level Entity Name : top
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 2,623 / 49,760 ( 5 % )
-    Total combinational functions : 2,502 / 49,760 ( 5 % )
-    Dedicated logic registers : 1,318 / 49,760 ( 3 % )
-Total registers : 1318
+Total logic elements : 2,001 / 49,760 ( 4 % )
+    Total combinational functions : 1,881 / 49,760 ( 4 % )
+    Dedicated logic registers : 1,039 / 49,760 ( 2 % )
+Total registers : 1039
 Total pins : 71 / 360 ( 20 % )
 Total virtual pins : 0
 Total memory bits : 829,952 / 1,677,312 ( 49 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )
-UFM blocks : 1 / 1 ( 100 % )
+UFM blocks : 0 / 1 ( 0 % )
 ADC blocks : 0 / 2 ( 0 % )

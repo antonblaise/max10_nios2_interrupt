@@ -1580,10 +1580,9 @@
 											<backup-path>
 												<node location="RIGHT" size="0.7781885397412199" id="1372710005721"/>
 												<node location="TOP" size="0.75" id="1372710005725"/>
-												<node location="LEFT" size="0.6183193900785428" id="1372710005727"/>
-												<node location="TOP" size="0.75" id="1372710005733"/>
-												<node location="BOTTOM" size="0.47858823529411765" id="1389812862722"/>
-												<leaf id="1389812862721"/>
+												<node location="RIGHT" size="0.38168060992145725" id="1372710005727"/>
+												<node location="TOP" size="0.6704331450094162" id="1389812802503"/>
+												<leaf id="1389812800464"/>
 											</backup-path>
 										</property>
 									</location>
