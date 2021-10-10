@@ -1,5 +1,5 @@
 Flow report for max10_nios2_interrupt
-Sun Oct 10 05:22:51 2021
+Sun Oct 10 05:50:27 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Oct 10 05:22:51 2021           ;
+; Flow Status                        ; Successful - Sun Oct 10 05:50:27 2021           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                      ; max10_nios2_interrupt                           ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; MAX 10                                          ;
 ; Device                             ; 10M50DAF484C7G                                  ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 2,001 / 49,760 ( 4 % )                          ;
-;     Total combinational functions  ; 1,881 / 49,760 ( 4 % )                          ;
-;     Dedicated logic registers      ; 1,039 / 49,760 ( 2 % )                          ;
-; Total registers                    ; 1039                                            ;
+; Total logic elements               ; 1,887 / 49,760 ( 4 % )                          ;
+;     Total combinational functions  ; 1,775 / 49,760 ( 4 % )                          ;
+;     Dedicated logic registers      ; 972 / 49,760 ( 2 % )                            ;
+; Total registers                    ; 972                                             ;
 ; Total pins                         ; 71 / 360 ( 20 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 829,952 / 1,677,312 ( 49 % )                    ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+-----------------------+
 ; Option            ; Setting               ;
 +-------------------+-----------------------+
-; Start date & time ; 10/10/2021 05:06:51   ;
+; Start date & time ; 10/10/2021 05:44:50   ;
 ; Main task         ; Compilation           ;
 ; Revision Name     ; max10_nios2_interrupt ;
 +-------------------+-----------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+-----------------------+----------------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value         ; Entity Name          ; Section Id     ;
 +-------------------------------------+----------------------------------------+-----------------------+----------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1098954757755.163381361123580          ; --                    ; --                   ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1098954757755.163381588928316          ; --                    ; --                   ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --                    ; --                   ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim (Verilog)                     ; <None>                ; --                   ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --                    ; --                   ; eda_simulation ;
@@ -105,16 +105,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:04:26     ; 1.0                     ; 4976 MB             ; 00:03:08                           ;
-; Fitter               ; 00:00:23     ; 2.3                     ; 6685 MB             ; 00:00:41                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4704 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:08     ; 3.5                     ; 5010 MB             ; 00:00:11                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4708 MB             ; 00:00:03                           ;
-; MIF/HEX Update       ; 00:00:02     ; 1.0                     ; 4743 MB             ; 00:00:02                           ;
-; MIF/HEX Update       ; 00:00:02     ; 1.0                     ; 4747 MB             ; 00:00:02                           ;
-; MIF/HEX Update       ; 00:00:02     ; 1.0                     ; 4747 MB             ; 00:00:02                           ;
-; MIF/HEX Update       ; 00:00:02     ; 1.0                     ; 4744 MB             ; 00:00:02                           ;
-; Total                ; 00:05:14     ; --                      ; --                  ; 00:04:16                           ;
+; Analysis & Synthesis ; 00:04:36     ; 1.0                     ; 4962 MB             ; 00:03:09                           ;
+; Fitter               ; 00:00:22     ; 2.3                     ; 6693 MB             ; 00:00:41                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4703 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:06     ; 3.8                     ; 5002 MB             ; 00:00:11                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4705 MB             ; 00:00:03                           ;
+; MIF/HEX Update       ; 00:00:02     ; 1.0                     ; 4746 MB             ; 00:00:02                           ;
+; Total                ; 00:05:14     ; --                      ; --                  ; 00:04:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -129,9 +126,6 @@ refer to the applicable agreement for further details.
 ; Timing Analyzer      ; ANTONIUS-OMEN    ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; ANTONIUS-OMEN    ; Windows 10 ; 10.0       ; x86_64         ;
 ; MIF/HEX Update       ; ANTONIUS-OMEN    ; Windows 10 ; 10.0       ; x86_64         ;
-; MIF/HEX Update       ; ANTONIUS-OMEN    ; Windows 10 ; 10.0       ; x86_64         ;
-; MIF/HEX Update       ; ANTONIUS-OMEN    ; Windows 10 ; 10.0       ; x86_64         ;
-; MIF/HEX Update       ; ANTONIUS-OMEN    ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -143,9 +137,6 @@ quartus_fit --read_settings_files=off --write_settings_files=off max10_nios2_int
 quartus_asm --read_settings_files=off --write_settings_files=off max10_nios2_interrupt -c max10_nios2_interrupt
 quartus_sta max10_nios2_interrupt -c max10_nios2_interrupt
 quartus_eda --read_settings_files=off --write_settings_files=off max10_nios2_interrupt -c max10_nios2_interrupt
-quartus_cdb max10_nios2_interrupt -c max10_nios2_interrupt --update_mif
-quartus_cdb max10_nios2_interrupt -c max10_nios2_interrupt --update_mif
-quartus_cdb max10_nios2_interrupt -c max10_nios2_interrupt --update_mif
 quartus_cdb max10_nios2_interrupt -c max10_nios2_interrupt --update_mif
 
 

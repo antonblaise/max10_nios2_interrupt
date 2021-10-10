@@ -38,11 +38,11 @@ module nios2 (
 	wire         mm_interconnect_0_cpu_debug_mem_slave_write;       // mm_interconnect_0:cpu_debug_mem_slave_write -> cpu:debug_mem_slave_write
 	wire  [31:0] mm_interconnect_0_cpu_debug_mem_slave_writedata;   // mm_interconnect_0:cpu_debug_mem_slave_writedata -> cpu:debug_mem_slave_writedata
 	wire         mm_interconnect_0_ram_s1_chipselect;               // mm_interconnect_0:RAM_s1_chipselect -> RAM:chipselect
-	wire  [15:0] mm_interconnect_0_ram_s1_readdata;                 // RAM:readdata -> mm_interconnect_0:RAM_s1_readdata
-	wire  [15:0] mm_interconnect_0_ram_s1_address;                  // mm_interconnect_0:RAM_s1_address -> RAM:address
-	wire   [1:0] mm_interconnect_0_ram_s1_byteenable;               // mm_interconnect_0:RAM_s1_byteenable -> RAM:byteenable
+	wire  [31:0] mm_interconnect_0_ram_s1_readdata;                 // RAM:readdata -> mm_interconnect_0:RAM_s1_readdata
+	wire  [14:0] mm_interconnect_0_ram_s1_address;                  // mm_interconnect_0:RAM_s1_address -> RAM:address
+	wire   [3:0] mm_interconnect_0_ram_s1_byteenable;               // mm_interconnect_0:RAM_s1_byteenable -> RAM:byteenable
 	wire         mm_interconnect_0_ram_s1_write;                    // mm_interconnect_0:RAM_s1_write -> RAM:write
-	wire  [15:0] mm_interconnect_0_ram_s1_writedata;                // mm_interconnect_0:RAM_s1_writedata -> RAM:writedata
+	wire  [31:0] mm_interconnect_0_ram_s1_writedata;                // mm_interconnect_0:RAM_s1_writedata -> RAM:writedata
 	wire         mm_interconnect_0_ram_s1_clken;                    // mm_interconnect_0:RAM_s1_clken -> RAM:clken
 	wire         mm_interconnect_0_rom_s1_chipselect;               // mm_interconnect_0:ROM_s1_chipselect -> ROM:chipselect
 	wire  [15:0] mm_interconnect_0_rom_s1_readdata;                 // ROM:readdata -> mm_interconnect_0:ROM_s1_readdata

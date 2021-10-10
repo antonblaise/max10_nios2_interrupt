@@ -37,7 +37,7 @@ module nios2_ROM (
                  )
 ;
 
-  parameter INIT_FILE = "E:/My_studies/3rd_year/Internship/Training/max10_nios2_interrupt/ROM_content.hex";
+  parameter INIT_FILE = "E:/My_studies/3rd_year/Internship/Training/max10_nios2_interrupt/nios2_ROM.hex";
 
 
   output  [ 15: 0] readdata;

@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sun Oct 10 05:11:18 2021
+Analysis & Synthesis Status : Successful - Sun Oct 10 05:49:26 2021
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 Revision Name : max10_nios2_interrupt
 Top-level Entity Name : top
 Family : MAX 10
-Total logic elements : 2,070
-    Total combinational functions : 1,876
-    Dedicated logic registers : 1,039
-Total registers : 1039
+Total logic elements : 1,959
+    Total combinational functions : 1,770
+    Dedicated logic registers : 972
+Total registers : 972
 Total pins : 71
 Total virtual pins : 0
 Total memory bits : 829,952

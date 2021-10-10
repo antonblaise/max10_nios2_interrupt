@@ -181,15 +181,15 @@ ELF_PATCH_FLAG  += --simulation_enabled false
 # devices. If true, adds -DALT_USE_DIRECT_DRIVERS to ALT_CPPFLAGS in public.mk. 
 # The Altera Host and read-only ZIP file systems can't be used if 
 # hal.enable_lightweight_device_driver_api is true. 
-# setting hal.enable_lightweight_device_driver_api is false
+# setting hal.enable_lightweight_device_driver_api is true
+ALT_CPPFLAGS += -DALT_USE_DIRECT_DRIVERS
 
 # Adds code to emulate multiply and divide instructions in case they are 
 # executed but aren't present in the CPU. Normally this isn't required because 
 # the compiler won't use multiply and divide instructions that aren't present 
 # in the CPU. If false, adds -DALT_NO_INSTRUCTION_EMULATION to ALT_CPPFLAGS in 
 # public.mk. none 
-# setting hal.enable_mul_div_emulation is false
-ALT_CPPFLAGS += -DALT_NO_INSTRUCTION_EMULATION
+# setting hal.enable_mul_div_emulation is true
 
 # Certain drivers are compiled with reduced functionality to reduce code 
 # footprint. Not all drivers observe this setting. The altera_avalon_uart and 
@@ -207,7 +207,9 @@ ALT_CPPFLAGS += -DALT_NO_INSTRUCTION_EMULATION
 # exception if a stack collision occurs with the heap or statically allocated 
 # data. If true, adds -DALT_STACK_CHECK and -fstack-limit-register=et to 
 # ALT_CPPFLAGS in public.mk. none 
-# setting hal.enable_runtime_stack_checking is false
+# setting hal.enable_runtime_stack_checking is true
+ALT_LDFLAGS += -fstack-limit-register=et
+ALT_CPPFLAGS += -DALT_STACK_CHECK -fstack-limit-register=et
 
 # The BSP is compiled with optimizations to speedup HDL simulation such as 
 # initializing the cache, clearing the .bss section, and skipping long delay 
