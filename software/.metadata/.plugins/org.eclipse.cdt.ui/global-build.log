@@ -195,3 +195,9 @@ Post-processing to create mem_init/hdl_sim/nios2_RAM.sym...
 nios2-elf-nm -n nios2_sw.elf > mem_init/hdl_sim/nios2_RAM.sym
 Post-processing to create mem_init/hdl_sim/ROM_content.sym...
 nios2-elf-nm -n nios2_sw.elf > mem_init/hdl_sim/ROM_content.sym
+02:47:03 **** Clean-only build of configuration Nios II for project testing_bsp ****
+make clean 
+[BSP clean complete]
+02:47:08 **** Clean-only build of configuration Nios II for project testing ****
+make clean 
+[testing clean complete]
